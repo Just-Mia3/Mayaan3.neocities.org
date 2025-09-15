@@ -1,0 +1,34 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+}
+
+.image-button {
+  display: inline-block;
+  position: relative;
+}
+
+.image-button img {
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  transform-origin: top center; /* Pivot from the top of the image */
+}
+
+/* Hover animation */
+.image-button:hover img {
+  animation: wobble 2.5s infinite ease-in-out;
+}
+
+@keyframes wobble {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-5deg); }
+  50%  { transform: rotate(5deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
