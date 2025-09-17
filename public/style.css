@@ -5,7 +5,7 @@ body {
   color: black;
   font-family: Verdana;
   background-color: pink;
-  background-repeat: url(heartpinkbg.gif)
+  background-repeat: url(bg/heartpinkbg.gif)
   background-repeat: repeat;
 }
 
@@ -21,10 +21,10 @@ body {
 }
 
 header { grid-area: header; border-style:double; background-color: aquamarine; }
-left { grid-area: left; border-style:double; background-image: url(patterntape.gif);}
+left { grid-area: left; border-style:double; background-image: url(bg/patterntape.gif);}
 main { grid-area: main; border-style:double; background-color: aqua;}
 right {grid-area: right; border-style: double; background-color: cadetblue; }
-footer { grid-area: footer; border-style:double; background-image: url(kawaii.png);}
+footer { grid-area: footer; border-style:double; background-image: url(bg/kawaii.png);}
 }
 
 .image-button {
