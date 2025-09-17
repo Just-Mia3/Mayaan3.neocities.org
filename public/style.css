@@ -1,11 +1,30 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your HTML content. To learn how to do something, just try searching Google for questions like "how to change link color." */
 
 body {
   background-color: white;
   color: black;
   font-family: Verdana;
+  background-color: pink;
+  background-repeat: url(heartpinkbg.gif)
+  background-repeat: repeat;
+}
+
+.container {
+   display: grid;
+   grid-gap: 10px;
+   grid-template:
+   "header header header"
+   "left main footer"
+   "footer footer footer"
+   / 100px 1fr;
+   padding: 10px;
+}
+
+header { grid-area: header; border-style:double; background-color: aquamarine; }
+left { grid-area: left; border-style:double; background-image: url(patterntape.gif);}
+main { grid-area: main; border-style:double; background-color: aqua;}
+right {grid-area: right; border-style: double; background-color: cadetblue; }
+footer { grid-area: footer; border-style:double; background-image: url(kawaii.png);}
 }
 
 .image-button {
