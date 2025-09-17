@@ -14,7 +14,7 @@ body {
    grid-gap: 10px;
    grid-template:
    "header header header"
-   "left main footer"
+   "left main right"
    "footer footer footer"
    / 100px 1fr;
    padding: 10px;
