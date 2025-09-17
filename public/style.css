@@ -30,7 +30,7 @@ footer { grid-area: footer; border-style:double; background-image: url("bg/kawai
   display: inline-block;
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 
 .image-button img {
