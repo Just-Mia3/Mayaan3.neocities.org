@@ -1,50 +1,144 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your HTML content. To learn how to do something, just try searching Google for questions like "how to change link color." */
 
 body {
-  background-color: white;
+  background-color: pink;
   color: black;
   font-family: Verdana;
-  background-color: pink;
   background-image: url("bg/heartpinkbg.gif");
   background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;          /* removes default spacing */
+  font-weight: normal; /* removes bold if you want */
+  font-size: 1em;      /* reset all to normal text size */
+}
+h1 { font-size: 32px; }  /* big title */
+h2 { font-size: 24px; }    /* section title */
+h3 { font-size: 19lx; }  /* subsection */
+h4 { font-size: 16px; }
+h5 { font-size: 13.5px; }
+h6 { font-size: 11px; }
+.container2 {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px;
+  gap: 10px;
+}
+.header {
+  grid-column: 1 / 4;
+  background-color: lightyellow;
+  background-image: url("bg/sakura.gif");
+  border-style: double;
+  padding: 10px;
+  border-style: double;
+  border-width: 3px;
+}
+.left {
+  grid-column: 1;
+  border-style: double;
+  background-image: url("bg/patterntape.gif");
+  padding: 10px;
+  border-style: double;
+  border-width: 3px;
+}
+.links {
+  grid-column: 2;
+  background-image: url("bg/patterntile.gif");
+  border-style: double;
+  border-width: 3px;
+  gap: 5px;
+  min-height: 50px;
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+a:link {
+  color: palevioletred;      /* unvisited links */
 }
 
-.container {
-   display: grid;
-   grid-gap: 10px;
-   grid-template:
-   "header header header"
-   "left main right"
-   "footer footer footer"
-   / 100px 1fr;
-   padding: 10px;
+a:visited {
+  color: crimson;        /* visited links */
 }
 
-header { grid-area: header; border-style:double; background-color: pink; }
-left { grid-area: left; border-style:double; background-image: url("bg/patterntape.gif");}
-main { grid-area: main; border-style:double; background-image: url("bg/kawaii.png");}
-right {grid-area: right; border-style: double; background-image: url("bg/patterntape.gif"); }
-footer { grid-area: footer; border-style:double; background-image: url("bg/kawaii.png");}
+a:hover {
+  color: deeppink;       /* hover color */
+  text-decoration: underline; /* optional */
+}
 
+a:active {
+  color: deeppink;         /* while clicking */
+}
+.links h4 {
+  text-align: center;
+  font-size: 20px;
+  border-bottom-style: double;
+  border-bottom-width: 3px;
+  background-image: url("bg/bowsbows.gif");
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+.main, .submain{
+  grid-column: 2;
+  background-image: url("bg/kawaii.png");
+  padding: 10px;
+  border-style: double;
+  border-width: 3px;
+}
+.right {
+  grid-column: 3;
+  background-image: url("bg/patterntape.gif");
+  padding: 10px;
+  border-style: double;
+  border-width: 3px;
+}
+.footer {
+  grid-column: 1 / 4;
+  background-image: url("bg/kawaii.png");
+  padding: 15px;
+  border-style: double;
+  border-width: 3px;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.main a:link, .submain a:link    { 
+  color: darkcyan; 
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+.main a:visited, .submain a:visited {
+  color: mediumaquamarine; 
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.main a:hover, .submain a:hover   {
+  color: aquamarine; 
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.main a:active, .submain a:active  {
+  color: aquamarine; 
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .image-button {
   display: inline-block;
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
+  padding: 5px;
 }
-
 .image-button img {
   display: block;
   margin: 0 auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   transition: transform 0.3s ease;
   transform-origin: top center; /* Pivot from the top of the image */
+  padding: 15px;
 }
-
 /* Hover animation */
 .image-button:hover img {
   animation: wobble 2.5s infinite ease-in-out;
 }
-
 @keyframes wobble {
   0%   { transform: rotate(0deg); }
   25%  { transform: rotate(-5deg); }
