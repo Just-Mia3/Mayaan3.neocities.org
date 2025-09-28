@@ -164,4 +164,61 @@ a:active {
   75%  { transform: rotate(-5deg); }
   100% { transform: rotate(0deg); }
 }
+/* ==== DEBUG + Force horizontal scrolling: paste this at the END of style.css ==== */
+
+/* allow smooth horizontal scrolling on phones */
+html, body {
+  width: 100%;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Visual debug: a border so you can immediately see the container width.
+   Remove or comment out the outline after it's working. */
+.container2 {
+  outline: 4px dashed rgba(0, 120, 255, 0.6); /* debug only — remove later */
+  background-clip: padding-box;
+}
+
+/* Force the layout to be at least desktop width and not shrink */
+.container2 {
+  width: 1024px !important;     /* fixed desktop-ish width */
+  min-width: 1024px !important; /* ensure it never compresses smaller */
+  max-width: none !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Make the three grid columns fixed for sidebars and flexible center */
+.container2 {
+  grid-template-columns: 220px 1fr 220px !important; /* increase sidebar width so text won't overflow */
+}
+
+/* Prevent sidebars from shrinking and force text wrapping inside them */
+.left, .right {
+  min-width: 220px !important;
+  max-width: 220px !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  box-sizing: border-box;
+}
+
+/* Prevent images or other elements inside the container from forcing a weird reflow.
+   Images will scale up to the container width instead of shrinking the grid down. */
+.container2 img, .container2 video {
+  max-width: none !important;
+  height: auto !important;
+}
+
+/* Optional: make main content flexible but not collapse too small */
+.main {
+  min-width: calc(1024px - 440px - 20px) !important; /* 1024 - (left+right) - approx gap */
+  box-sizing: border-box;
+}
+
+/* If any global rule elsewhere is forcing max-width:100%, undo it inside container */
+.container2 * {
+  max-width: none !important;
+}
 
