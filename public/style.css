@@ -33,6 +33,7 @@ h6 { font-size: 11px; }
   width: 1024px !important;   /* lock grid to 1024px */
   margin: 0 auto !important;
   box-sizing: border-box;
+  min-width: 1024px;
 }
 .header {
   grid-column: 1 / 4;
