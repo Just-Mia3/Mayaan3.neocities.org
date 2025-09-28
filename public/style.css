@@ -24,7 +24,7 @@ h6 { font-size: 11px; }
   display: grid;
   grid-template-columns: 100px 1fr 150px;
   gap: 10px;
-  min-width: 1024px; /* fixed desktop width */
+  width: 1024px; /* fixed desktop width */
   margin: 0 auto;    /* center it on wide screens */
 }
 .header {
