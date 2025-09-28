@@ -125,7 +125,12 @@ a:active {
   background-color: rgba(255, 255, 255, 0.7);
 }
 .header3 {
+  grid-column: 1 / 4;
   background-color: red !important;
+  border-style: double;
+  padding: 10px;
+  border-style: double;
+  border-width: 3px;
 }
 .image-button {
   display: inline-block;
