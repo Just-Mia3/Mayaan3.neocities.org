@@ -1,5 +1,10 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your HTML content. To learn how to do something, just try searching Google for questions like "how to change link color." */
 
+html, body {
+  width: 1024px !important;   /* force full page width */
+  margin: 0 auto !important;  /* center it on desktop */
+  overflow-x: auto !important; /* allow sideways scroll on phones */
+}
 body {
   background-color: pink;
   color: black;
@@ -30,6 +35,9 @@ h6 { font-size: 11px; }
   gap: 10px;
   width: 1024px; /* fixed desktop width */
   margin: 0 auto;    /* center it on wide screens */
+  width: 1024px !important;   /* lock grid to 1024px */
+  margin: 0 auto !important;
+  box-sizing: border-box;
 }
 .header {
   grid-column: 1 / 4;
