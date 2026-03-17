@@ -1,0 +1,28 @@
+body {
+		background-color: #2F4F4F;
+}
+
+
+.svg-stack {
+  position: relative;
+  width: 535px;
+  height: 496px;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  z-index: 1;
+}
+
+.middle {
+		 z-index: 2;
+}
+
+.top {
+  z-index: 3;
+}
